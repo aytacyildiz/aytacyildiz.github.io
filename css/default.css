@@ -1,0 +1,167 @@
+/*
+	Site
+*/
+
+/* http://purecss.io/grids/#using-grids-with-custom-fonts */
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"],
+.pure-g-r [class *= "pure-u"] {
+	/* https://github.com/yui/pure/blob/master/src/grids/css/grids-core.css#L25 */
+	font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+}
+a{
+	color: #551a8b;
+	text-decoration: none;
+}
+a:hover{
+	color: #C66;
+}
+body{
+	background-color: #fcfcfc;
+	color: #111;
+}
+
+/*
+	Site Navigation
+*/
+
+/* http://purecss.io/combo/1.11.5?/css/main-grid.css&/css/layouts/blog.css line 908 */
+.nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.nav-item a{
+	display: block;
+	padding: 0.5em 0.8em;
+	background-color: #fcfcfc;
+	/*border: 0.15em solid red;*/
+	margin-bottom: 0.5em;
+}
+
+/*
+	Site Header
+*/
+
+#site-header-h1{
+	font-family: 'Dosis', FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+	font-size: 3.2em;
+	font-weight: 300;
+	color: #fff;
+	text-shadow: 0.05em 0.05em 0 #000, 0.08em 0.08em 0 #1D1F21;
+}
+#site-header{
+	/*background-color: #ddd;*/
+	background-color: #1D1F21;
+	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAALUlEQVQIW2NkYGAwBmIYmAliMCIJggWAIB0mCBeAqTwDUwGkQZJglSDBdGRzATViBzdq1aGpAAAAAElFTkSuQmCC"), url("/images/header.png");
+	background-repeat: repeat, repeat-y;
+	text-align: center;
+}
+#site-header-h1-icon{
+	display: block;
+}
+
+/*
+	Site Posts
+*/
+
+#site-index-page, #site-article-page{
+	padding: 0 0.3em;
+}
+.site-posts-header{
+	font-size: 1.8em;
+}
+.site-posts-article{
+	margin: 1em 0 0 0;
+}
+.site-posts-footer{
+	font-size: 0.8em;
+	font-style: italic;
+}
+.site-posts-calendar{
+	margin-right: 0.4em;
+}
+.site-posts-categories{
+	margin: 0 0.3em 0 0.4em;
+}
+
+/*
+	Article
+*/
+#site-article-tags, #site-article-date{
+	color: #888;
+	margin: 0.5em 1.5em 0 0;
+	display: block;
+}
+
+/*
+	Side Bar
+*/
+#side-bar-paylas{
+	list-style: none;
+	font-size: 1.6em;
+	margin: 0;
+	padding: 0
+}
+#side-bar-linkler{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+/*
+	Site Footer
+*/
+#site-footer > p{
+	text-align: center;
+	display: block;
+	margin-top: 3em;
+	font-size: 0.8em;
+	color: #888;
+}
+
+/* pure css grid
+	@media screen and (min-width: 35.5em) 	default
+	@media screen and (min-width: 48em)		md
+	@media screen and (min-width: 58em)		lg
+ */
+@media screen and (min-width: 48em){
+	#site-header-h1-icon{
+		display: inline;
+	}
+	.nav-item {
+	    display: inline-block;
+	    *display: inline;
+	    zoom: 1;
+	}
+	.nav{
+		margin: 3em 0 0 0;
+	}
+	.site-posts-header{
+		font-size: 2em;
+	}
+	#site-index-page, #site-article-page{
+		padding: 3em 1em 0 1em;
+	}
+	#site-article-tags, #site-article-date{
+		margin: 0.5em 1.5em 0 0;
+		display: inline;
+	}
+}
+@media screen and (min-width: 58em){
+	#site-header{
+		height: 300px;
+	}
+	#site-header-h1{
+		margin: 2em 0 0 0;
+	}
+	.nav{
+		margin: 7.5em 0 0 0;
+	}
+	#site-index-page, #site-article-page{
+		padding: 3em 3em 0 10em;
+	}
+	#site-article-content{
+		margin-right: 1em;
+	}
+}

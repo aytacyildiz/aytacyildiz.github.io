@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<section id="site-article" class="pure-u-1">
+	<div id="site-article-page">
+		<div class="pure-g">
+			<article class="pure-u-1 pure-u-md-1 pure-u-lg-2-3">
+				<div id="site-article-content">
+					<header>
+						<h1>{{page.title}}</h1>
+					</header>
+					{{content}}
+					<time id="site-article-date" datetime="{{ page.date | date_to_xmlschema }}"><i class="fa fa-calendar site-posts-calendar"></i>{{ page.date | date: "%-d %B %Y" }}</time>
+					<em id="site-article-tags">{% for tag in page.tags %}<i class="fa fa-tag"></i>&nbsp;{{tag}}&nbsp;&nbsp;{% endfor %}</em>
+				</div>
+			</article>
+			<aside id="site-sidebar" class="pure-u-1 pure-u-md-1 pure-u-lg-1-3">
+				{% include sidebar.html %}
+			</aside>
+		</div>
+	</div>
+</section>
