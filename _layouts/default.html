@@ -14,6 +14,29 @@
 	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0-rc-1/grids-responsive-min.css">
 	<!--<![endif]-->
 	<link rel="stylesheet" href="/css/default.css?{{ site.data['hash'] }}">
+	<!-- http://anandu.info/posts/seo-optimize-jekyll-2/ -->
+	<meta name="twitter:title" content="{{ page.title }}">
+	<meta property="og:title" content="{{ page.title }}" />
+	<meta property="og:sitename" content="{{ page.title }}" />
+	<meta itemprop="name" content="{{ page.title }}">
+	{% if page.description %}
+	<meta name="twitter:description" content="{{ page.description }}">
+	<meta property="og:description" content="{{ page.description }}" />
+	<meta itemprop="description" content="{{ page.description }}">
+	<meta name="description" content="{{ page.description }}" />
+	{% endif %}
+	<meta name="twitter:creator" content="aytacyildiz">
+	<meta name="twitter:domain" content="http://aytacyildiz.github.io{{ page.url }}">
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="http://aytacyildiz.github.io{{ page.url }}" />
+	<!-- <meta property="og:image" content="http://domain.com/opengraph-image.png" /> -->
+	<!-- <meta name="twitter:image:src" content="http://domain.com/twitter-image.png"> -->
+	<!-- <meta name="twitter:card" content="summary"> -->
+	<!-- <meta name="twitter:site" content="@twitter-username"> -->
+	<!-- <link rel="author" href="https://plus.google.com/google-plus-profile-id/posts"/> -->
+	{% if page.tags %}
+	<meta name="keywords" content="{{ page.tags | array_to_sentence_string }}">
+	{% endif %}
 </head>
 <body>
 <div class="pure-g">
