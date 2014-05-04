@@ -1,4 +1,4 @@
 aytacyildiz.github.io
 =====================
 
-Kişisel blog sitem için ilk hazırlık. http://jekyllrb.com/docs/github-pages/
+Kişisel blog [sitem](http://aytacyildiz.github.io/) için ilk hazırlık. http://jekyllrb.com/docs/github-pages/
