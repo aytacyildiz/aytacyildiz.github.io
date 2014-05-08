@@ -8,6 +8,7 @@ html, button, input, select, textarea,
 .pure-g-r [class *= "pure-u"] {
 	/* https://github.com/yui/pure/blob/master/src/grids/css/grids-core.css#L25 */
 	font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+	line-height: 1.4;
 }
 a{
 	color: #551a8b;
@@ -92,6 +93,12 @@ body{
 	color: #888;
 	margin: 0.5em 1.5em 0 0;
 	display: block;
+}
+.pure-img-border{
+	outline: 0.15em solid #ddd;
+}
+#site-article-content .highlight{
+	background-color: #fff;
 }
 
 /*
