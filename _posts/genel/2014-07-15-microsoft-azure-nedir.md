@@ -51,7 +51,7 @@ Microsoft Azure dört temel bulut-tabanlı servis kategorisi içermektedir. <a t
 	<li>Zamanlayıcı (Schedular)</li>
 	<li>BizTalk Servisleri (Biztalk Services)</li>
 	<li>Aktif Rehber (Active Directory)</li>
-	<li>Çok Faktörlü Doğrulama (Multi-fator Authentication)</li>
+	<li>Çok Faktörlü Doğrulama (Multi-factor Authentication)</li>
 	<li>Otomasyon (Automation)</li>
 	<li>İçerik Dağıtım Ağı (Content Delivery Network)</li>
 	<li>API Yönetimi (API Managment)</li>
