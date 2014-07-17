@@ -20,7 +20,7 @@ Microsoft Azure dört temel bulut-tabanlı servis kategorisi içermektedir. <a t
 <ul>
 	<li>Hesaplama servisleri (Compute services)
 <ul>
-	<li>Sanal Makineler (Virtual Mechines)</li>
+	<li>Sanal Makineler (Virtual Machines)</li>
 	<li>İnternet Siteleri (Web Sites)</li>
 	<li>Bulut Servisleri (Clout Services)</li>
 	<li>Mobil Servisleri (Mobile Services)</li>
