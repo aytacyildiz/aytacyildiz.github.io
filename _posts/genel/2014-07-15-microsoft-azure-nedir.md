@@ -48,7 +48,7 @@ Microsoft Azure dört temel bulut-tabanlı servis kategorisi içermektedir. <a t
 	<li>Medya Servisleri (Media Services)</li>
 	<li>Servis Veriyolu (Service Bus)</li>
 	<li>Push Bildirimleri (Push Notifications)</li>
-	<li>Zamanlayıcı (Schedular)</li>
+	<li>Zamanlayıcı (Scheduler)</li>
 	<li>BizTalk Servisleri (Biztalk Services)</li>
 	<li>Aktif Rehber (Active Directory)</li>
 	<li>Çok Faktörlü Doğrulama (Multi-factor Authentication)</li>
