@@ -7,7 +7,7 @@ tags: [bulut bilişim, azure, virtual mechine, sanal makine, microsoft azure, wi
 ---
 <a href="/images/2014-07-15-microsoft-azure-nedir/azure.png" title="Microsoft Azure"><img src="/images/2014-07-15-microsoft-azure-nedir/azure.png" class="pure-img" alt="Microsoft Azure"></a>
 
-Micorosft Azure  birçok farklı servisi içerisinde barındıran bir bulut platformudur. Dünyanın çeşitli yerlerinde konumlandırılmış Microsoft veri merkezlerinde barındırılırmaktadır. Bir çok Azure servisi bulut bilişim kalıplarına tam olarak uymasada <a title="Infrastructure as a service" href="http://en.wikipedia.org/wiki/Infrastructure_as_a_service#Infrastructure_as_a_service_.28IaaS.29">IaaS</a> olarak Sanal Makineler üzerinde kosan işletim sistemleri, Depolama ve Ağ <a title="Platform as a service" href="http://en.wikipedia.org/wiki/Platform_as_a_service">PaaS</a> olarak Bulut Servisleri, Mobil Servisler gibi hızlıca bir ayrım yapabiliriz.
+Micorosft Azure  birçok farklı servisi içerisinde barındıran bir bulut platformudur. Dünyanın çeşitli yerlerinde konumlandırılmış Microsoft veri merkezlerinde barındırılırmaktadır. Bir çok Azure servisi (bulut bilişim kalıplarına tam olarak uymasada) <a title="Infrastructure as a service" href="http://en.wikipedia.org/wiki/Infrastructure_as_a_service#Infrastructure_as_a_service_.28IaaS.29">IaaS</a> olarak Sanal Makineler üzerinde koşan işletim sistemleri, Depolama ve Ağ, <a title="Platform as a service" href="http://en.wikipedia.org/wiki/Platform_as_a_service">PaaS</a> olarak Bulut Servisleri, Mobil Servisler gibi hızlıca bir ayrım yapabiliriz.
 <h2>Neden Bulut?</h2>
 Fiziksel olarak sunucu barındırmanın yerine bulut bilişim hizmetlerini kullanmanın ne gibi yararlar sağlayacağına gelin birlikte bakalım;
 <ul>
