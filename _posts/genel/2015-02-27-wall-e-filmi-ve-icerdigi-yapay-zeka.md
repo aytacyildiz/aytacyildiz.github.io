@@ -72,4 +72,6 @@ gerçekçi olduğu aşikar fakat unutmamız gereken bu senaryolarının günüm�
 teknolojilerinin ilhamıyla kurgulanıyor olmasıdır. Uzun bir yazı oldu ama film ciddi bir ders konusu
 bakış açısının dışında harika diyebileceğim bir seviyede. İzlemeyenlere önermenizi tavsiye ederim.
 
+<a href="/images/2015-02-27-wall-e-filmi-ve-icerdigi-yapay-zeka/PEAS.png" title="PEAS and Work Environment"><img src="/images/2015-02-27-wall-e-filmi-ve-icerdigi-yapay-zeka/PEAS.png" class="pure-img" alt="PEAS and Work Environment" /></a>
+
 Kaynak: [https://en.wikipedia.org/wiki/WALL-E](https://en.wikipedia.org/wiki/WALL-E)
