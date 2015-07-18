@@ -176,3 +176,59 @@ body{
 		margin-right: 1em;
 	}
 }
+
+/*
+	Font Awesome Customized http://fontello.com/
+*/
+@font-face {
+	font-family: 'font-awesome-custom';
+	src: url('../font/font-awesome-custom.eot?46113469');
+	src: url('../font/font-awesome-custom.eot?46113469#iefix') format('embedded-opentype'),
+	     url('../font/font-awesome-custom.woff?46113469') format('woff'),
+	     url('../font/font-awesome-custom.ttf?46113469') format('truetype'),
+	     url('../font/font-awesome-custom.svg?46113469#font-awsome-custom') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+.fa{
+	display: inline-block;
+  font-family: 'font-awesome-custom';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.fa-home:before {
+  content: "\E800";
+}
+.fa-github:before{
+	content: "\E801";
+}
+.fa-twitter:before {
+  content: "\E802";
+}
+.fa-twitter-square:before {
+  content: "\E803";
+}
+.fa-facebook-square:before {
+  content: "\E804";
+}
+.fa-google-plus-square:before {
+  content: "\E805";
+}
+.fa-linkedin-square:before {
+  content: "\E806";
+}
+.fa-calendar:before {
+  content: "\E807";
+}
+.fa-tag:before {
+  content: "\E808";
+}
+.fa-folder-open:before {
+  content: "\E809";
+}
+.fa-code:before {
+  content: "\E80a";
+}
