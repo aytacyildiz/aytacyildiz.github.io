@@ -1,4 +1,4 @@
-/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+/*! HTML5 Boilerplate v5.2.0 | MIT License | http://h5bp.com/ */
 
 /*
  * What follows is the result of much research on cross-browser styling.
@@ -33,6 +33,7 @@
 audio,
 canvas,
 img,
+iframe,
 svg,
 video {
     vertical-align: middle;
@@ -57,147 +58,168 @@ textarea {
 }
 
 /* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
+  Helper classes
+  ========================================================================== */
 
 /*
- * Hide visually and from screen readers: h5bp.com/u
- */
+* Hide visually and from screen readers:
+*/
 
 .hidden {
-    display: none !important;
-    visibility: hidden;
+   display: none !important;
 }
 
 /*
- * Hide only visually, but have it available for screen readers: h5bp.com/v
- */
+* Hide only visually, but have it available for screen readers:
+* http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*/
 
 .visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+   border: 0;
+   clip: rect(0 0 0 0);
+   height: 1px;
+   margin: -1px;
+   overflow: hidden;
+   padding: 0;
+   position: absolute;
+   width: 1px;
 }
 
 /*
- * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p
- */
+* Extends the .visuallyhidden class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
 
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
+   clip: auto;
+   height: auto;
+   margin: 0;
+   overflow: visible;
+   position: static;
+   width: auto;
 }
 
 /*
- * Hide visually and from screen readers, but maintain layout
- */
+* Hide visually and from screen readers, but maintain layout
+*/
 
 .invisible {
-    visibility: hidden;
+   visibility: hidden;
 }
 
 /*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
 
 .clearfix:before,
 .clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+   content: " "; /* 1 */
+   display: table; /* 2 */
 }
 
 .clearfix:after {
-    clear: both;
+   clear: both;
 }
 
 /* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request: h5bp.com/r
-   ========================================================================== */
+  EXAMPLE Media Queries for Responsive Design.
+  These examples override the primary ('mobile first') styles.
+  Modify as content requires.
+  ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+   /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+      (min-resolution: 1.25dppx),
+      (min-resolution: 120dpi) {
+   /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+  Print styles.
+  Inlined to avoid the additional HTTP request:
+  http://www.phpied.com/delay-loading-your-print-css/
+  ========================================================================== */
 
 @media print {
-    * {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster: h5bp.com/s */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
+   *,
+   *:before,
+   *:after {
+       background: transparent !important;
+       color: #000 !important; /* Black prints faster:
+                                  http://www.sanbeiji.com/archives/953 */
+       box-shadow: none !important;
+       text-shadow: none !important;
+   }
 
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
+   a,
+   a:visited {
+       text-decoration: underline;
+   }
 
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
+   a[href]:after {
+       content: " (" attr(href) ")";
+   }
 
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
+   abbr[title]:after {
+       content: " (" attr(title) ")";
+   }
 
-    /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
+   /*
+    * Don't show links that are fragment identifiers,
+    * or use the `javascript:` pseudo protocol
+    */
 
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
+   a[href^="#"]:after,
+   a[href^="javascript:"]:after {
+       content: "";
+   }
 
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
+   pre,
+   blockquote {
+       border: 1px solid #999;
+       page-break-inside: avoid;
+   }
 
-    thead {
-        display: table-header-group; /* h5bp.com/t */
-    }
+   /*
+    * Printing Tables:
+    * http://css-discuss.incutio.com/wiki/Printing_Tables
+    */
 
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
+   thead {
+       display: table-header-group;
+   }
 
-    img {
-        max-width: 100% !important;
-    }
+   tr,
+   img {
+       page-break-inside: avoid;
+   }
 
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
+   img {
+       max-width: 100% !important;
+   }
 
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
+   p,
+   h2,
+   h3 {
+       orphans: 3;
+       widows: 3;
+   }
+
+   h2,
+   h3 {
+       page-break-after: avoid;
+   }
 }
