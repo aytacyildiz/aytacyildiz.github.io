@@ -4,9 +4,7 @@
 
 /* http://purecss.io/grids/#using-grids-with-custom-fonts */
 html, button, input, select, textarea,
-.pure-g [class *= "pure-u"],
-.pure-g-r [class *= "pure-u"] {
-	/* https://github.com/yui/pure/blob/master/src/grids/css/grids-core.css#L25 */
+.pure-g [class *= "pure-u"] {
 	font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
 	line-height: 1.4;
 }
@@ -157,6 +155,9 @@ body{
 	#site-article-tags, #site-article-date{
 		margin: 0.5em 1.5em 0 0;
 		display: inline;
+	}
+	#site-sidebar p{
+		padding: 0 1em 0 0;
 	}
 }
 @media screen and (min-width: 58em){
