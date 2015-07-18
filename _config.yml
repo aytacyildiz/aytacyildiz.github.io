@@ -3,6 +3,5 @@ exclude: ['README.md','LICENSE']
 permalink: :year/:month/:day/:title.html
 
 # https://github.com/agelber/jekyll-rss
-url: http://localhost:4000/
+url: http://kodgunlugum.com
 name: Kod Günlüğüm
-rss_name: rss.xml
