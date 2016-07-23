@@ -1,4 +1,4 @@
-markdown: redcarpet
+markdown: kramdown
 exclude: ['README.md','LICENSE']
 permalink: :year/:month/:day/:title.html
 
