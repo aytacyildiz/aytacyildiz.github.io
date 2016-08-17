@@ -6,8 +6,10 @@ description: Entity Framework ile objeleri veri tabanında saklanabilir halde ku
 tags: [EF, ADO.NET, .NET, Framework, Database, Visiual Studio]
 ---
 Uygulama geliştiriken objeleri kullanmak bilinen bir yöntem. Bu yöntem objeler arasında ilişkiler oluşturmak için referanslar vermeyide içeriyor. Fakat, bu objeleri ve içerdikileri bilgileri bir veri tabanda saklamak istediğimizde ne yapmalıyız? Öncelikle objelerin niteliklerini veri tabanı veri türlerine (sayi, string, tarih vs.) dönüştirmeliyiz. Dahada zorlayıcı olanı diğer iş ise eğer obje bir diğer objeyi yada listesini içeriyorsa bunu veri tabanında primary key ve foreign key kullanarak modellemeliyiz. Ayrıca veri tabanındaki tabloları objelere çevirmek için tersi yönde bir iş daha yapmalıyız. Birçok kod satırı ve zaman gerektiren bir eylem. İşte bu yüzden zaman ve işten tasaruf için nesne ilişkisel eşleme (object-relational mapping) yazılım geliştirme yöntemi kullanılır. Bu yöntem ile objeye dayalı programlama veri türlerine uyumlu olmayan verileri uyumlu hale çevirme bizim için kendiliğinden gerçekleşir. Bu gerçeleştirimi yapan araçlardan biri ise [Entitiy Framework](http://msdn.microsoft.com/en-US/data/ef) (EF).
+
 ## Entitiy Framework Paketi
 Bu yazımda [Microsoft Visual Studio 2013](https://en.wikipedia.org/wiki/Microsoft_Visual_Studio) kullanacağım. Objeye dayalı programala dili ile bir veri tabanı kullanarak çok sade bir örnek vereğim. <abbr title="Entitiy Framework">EF</abbr> araçları Visual Studio 2013 içerisinde entegre olarak bilgisayarımıza kuruluyor. Bu konuda bir şey yapmamıza gerek yok. Fakat <abbr title="Entitiy Framework">EF</abbr> runtime için [bir paket](http://www.nuget.org/packages/EntityFramework/) bulunuyor. Bu paketi indirip kurmamız gerekli. Bunu yapabilmek içinde bir paket yöneticisine ihtiyacımız var [NuGet](http://www.nuget.org/).
+
 ## NuGet Paket Yöneticisinin Kurulumu
 Paket yöneticisini yüklemek için yapmamız gereken şey `Tools` > `Extensions and Updates...` yolunu izlemek.
 
@@ -33,10 +35,10 @@ Artık `Tools` menüsü altında `NaGet Package Manager` alt menüsünü görebi
 
 <a href="/images/2014-05-08-ado-net-ortaminda-entity-framework-ile-uygulama-gelistirme/Screenshot (8).png"><img src="/images/2014-05-08-ado-net-ortaminda-entity-framework-ile-uygulama-gelistirme/Screenshot (8).png" class="pure-img"></a>
 
-##Entity Framework Paketini Yüklemek
+## Entity Framework Paketini Yüklemek
 Paketi iki şekilde yükleyebilirsiniz, bir kere yükledinizmi diğer projelirinizde kullanamak için tekrar yüklemenize gerekte kalmaz. Bu yöntemler şunlardır:
 
-###1. Paket Yöneticisi Konsolu
+### 1. Paket Yöneticisi Konsolu
 `Tools` menüsündeki `NaGet Package Manager` menüsü altında `Package Manager Console` ile konsol ekranına erişebiliriz.
 
 <a href="/images/2014-05-08-ado-net-ortaminda-entity-framework-ile-uygulama-gelistirme/Screenshot (14).png"><img src="/images/2014-05-08-ado-net-ortaminda-entity-framework-ile-uygulama-gelistirme/Screenshot (14).png" class="pure-img"></a>
@@ -72,7 +74,7 @@ Bu komutla aynı yerdeki güncellemesi mevcut olan paketleri listeleyebilirsiniz
 PM> Get-Package -Updates
 ```
 
-###2. NuGet Paket Yönetme Arayüzü
+### 2. NuGet Paket Yönetme Arayüzü
 `Solution Explorer` panelinde projenizin `References` kısımını sağ tıklayıp `Manage NuGet Packages...` menü seçeneği ile bu arayüze erişebilirsiniz.
 
 <a href="/images/2014-05-08-ado-net-ortaminda-entity-framework-ile-uygulama-gelistirme/Screenshot (9).png"><img src="/images/2014-05-08-ado-net-ortaminda-entity-framework-ile-uygulama-gelistirme/Screenshot (9).png" class="pure-img"></a>
@@ -85,7 +87,7 @@ Arayüz karşınıza çıktığı zaman arama kutusuna `Entitiy Framework` yazı
 
 <a href="/images/2014-05-08-ado-net-ortaminda-entity-framework-ile-uygulama-gelistirme/Screenshot (12).png"><img src="/images/2014-05-08-ado-net-ortaminda-entity-framework-ile-uygulama-gelistirme/Screenshot (12).png" class="pure-img"></a>
 
-##Uygulama Geliştirme
+## Uygulama Geliştirme
 Gerekli paketi yüklediğimize göre .NET ortamında uygulama geliştirirken nasıl kullanılacağına değinebiliriz artık. Şimdi çok basit bir örnek ile başlayalım. Bir C# ile WPF projesi yapacağımızı var sayalım. Projemizin adını üzerine sağ tıklayıp `Add` > `New Item...` alt menüsüne tıklayalım.
 
 <a href="/images/2014-05-08-ado-net-ortaminda-entity-framework-ile-uygulama-gelistirme/Screenshot (15).png"><img src="/images/2014-05-08-ado-net-ortaminda-entity-framework-ile-uygulama-gelistirme/Screenshot (15).png" class="pure-img"></a>
@@ -110,7 +112,7 @@ Ve en sonunda bizi veri tababının hangi tablolarını vs. kullanıp modeli olu
 
 <a href="/images/2014-05-08-ado-net-ortaminda-entity-framework-ile-uygulama-gelistirme/Screenshot (21).png"><img src="/images/2014-05-08-ado-net-ortaminda-entity-framework-ile-uygulama-gelistirme/Screenshot (21).png" class="pure-img"></a>
 
-##Entity Data Model
+## Entity Data Model
 <abbr title="Entitiy Framework">EF</abbr> varlıklar ve aralarındaki ilişkileri belirtmek için [Entity Data Model](http://en.wikipedia.org/wiki/Entity_Framework#Entity_Data_Model) (EDM) tekniğini kullanır. Bu modeli düzenlemize yarayan [EF Designer](http://msdn.microsoft.com/en-us/data/jj713299.aspx) varsayılan olarak Visual Studio 2013 içerisindedir. Örneğin aşağıdaki veri tabanının varlık-bağıntı modeline ([entity-relationship model](http://tr.wikipedia.org/wiki/Entity-relationship_model) (ER)) bir göz atalım.
 
 <a href="/images/2014-05-08-ado-net-ortaminda-entity-framework-ile-uygulama-gelistirme/demo-er.png"><img src="/images/2014-05-08-ado-net-ortaminda-entity-framework-ile-uygulama-gelistirme/demo-er.png" class="pure-img"></a>
@@ -123,7 +125,7 @@ Böylece `Person` sınıfının `EmailAdresses` adında `EmailAdress` sınıfı 
 
 Farklı bir seçenek olarak <abbr title="Entity Data Model">EDM</abbr> kullanmak için elinizde bir veri tabanı bulunmasına gerek yoktur. Yukarıda belirttiğim iki seçenekten biri `Empty model` ile boş bir <abbr title="Entity Data Model">EDM</abbr> kullanarak EF Designer ile veri modelimizi oluşturabiliriz. Böylece veri tabanı veri türleri ile C# veri türleri arasındaki uyumsuzluğu düşünmemize gerek kalmaz. Bu dönüşümü <abbr title="Entitiy Framework">EF</abbr> bizim için gerçekleştirir.
 
-##Kodlama
+## Kodlama
 Artık veri modelimiz projemize eklendiğine göre bu yeni sınıfları kullanmaya başlayabiliriz. Benim örneğimde `DemoEntities` olarak adlandırdığım sınıf veri tabanı bağlantısını ve varlık nesnelerini tutan bir sınıftır. Bu sınıf değişiklik takibi, ayrıt edici özellik takibi vs. işleri gereçekleştirir ve LINQ-tabanlı veri erşimi sağlar. Bu sınıfın myE adında bir nesnesini oluşturalım.
 
 {% highlight c# %}
@@ -170,7 +172,7 @@ Var olan veri sisteminde kayıtlara id ile erişmek yerine `myE` nesneside yer a
 var p_where = myE.People.Where(prs => prs.name == "Henry");
 {% endhighlight %}
 
-###Değişiklikleri Kaydetme
+### Değişiklikleri Kaydetme
 Eğer yeni bir kayıt için nesne oluşturduysak bunu var olan nesne koleksiyonuna eklememiz gerekli. Yoksa bu yeni kayıt arkaplanda veri tabanında muhafaza edilmez.
 
 {% highlight c# %}
