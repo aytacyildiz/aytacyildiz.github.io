@@ -128,62 +128,62 @@ Farklı bir seçenek olarak <abbr title="Entity Data Model">EDM</abbr> kullanmak
 ## Kodlama
 Artık veri modelimiz projemize eklendiğine göre bu yeni sınıfları kullanmaya başlayabiliriz. Benim örneğimde `DemoEntities` olarak adlandırdığım sınıf veri tabanı bağlantısını ve varlık nesnelerini tutan bir sınıftır. Bu sınıf değişiklik takibi, ayrıt edici özellik takibi vs. işleri gereçekleştirir ve LINQ-tabanlı veri erşimi sağlar. Bu sınıfın myE adında bir nesnesini oluşturalım.
 
-{% highlight c# %}
+``` c#
 DemoEntities myE = new DemoEntities();
-{% endhighlight %}
+```
 
 Artık elimizde kayıtlı olan verilere sınıflar araclığı ile erişebiliriz. Mesela `Person` tablosunda kayıtlı olan ve id numarası 1 olan (tablodaki id kolonunun isimini yazmayada gerek yok) nesneyi elde etmek için:
 
-{% highlight c# %}
+``` c#
 Person p = myE.People.Find(1);
-{% endhighlight %}
+```
 
 Daha sonra bu elde ettiğimiz nesnenin özelliklerini değiştirebiliriz:
 
-{% highlight c# %}
+``` c#
 Person p = myE.People.Find(1);
 p.name = "XXXXX";
 p.lastname = "YYYYY";
-{% endhighlight %}
+```
 
 Elimizde kaydı olan bir veriyi değiştirmek yanında yeni bir veri kaydı oluşturabilir yada bir veri kaydını bir daha kullanmamak adına silebiliriz. Yeni bir `Person` nesnesi oluşturduğumuzu varsayalım:
 
-{% highlight c# %}
+``` c#
 Person p_new = new Person();
 p_new.personId = 4;
 p_new.name = "XXXXX";
 p_new.lastname = "YYYYY";
-{% endhighlight %}
+```
 
 Bununla arkaplanda bu nesnenin var olduğu tablodaki satır hücrelerini doldurmuş oluyoruz. Fakat `Person` tablosu ile `EmailAdress` tablosu arasındaki foreign key ilişkisini nasıl tanımlayacağız? Bunu bir tablo hücresi doldurmak yerine o nesnenin ilgili alanındaki karşılığını yazarak yapabiliriz:
 
-{% highlight c# %}
+``` c#
 EmailAdress email = new EmailAdress();
 email.email_id = 5;
 email.email = "a@b.com";
 p_new.EmailAdresses.Add(email);
-{% endhighlight %}
+```
 
 Artık yeni oluşturduğumuz p_new nesnesi ile temsil ettiğimiz kişinin mail adresi email isimli nesne olacaktır.
 
 Var olan veri sisteminde kayıtlara id ile erişmek yerine `myE` nesneside yer alan nesne koleksiyonlarında `where` fonksiyonu ile LINQ kullanarak sorgular yapabiliriz. Mesela isimi Henry olan tüm kişileri elde etmek için:
 
-{% highlight c# %}
+``` c#
 var p_where = myE.People.Where(prs => prs.name == "Henry");
-{% endhighlight %}
+```
 
 ### Değişiklikleri Kaydetme
 Eğer yeni bir kayıt için nesne oluşturduysak bunu var olan nesne koleksiyonuna eklememiz gerekli. Yoksa bu yeni kayıt arkaplanda veri tabanında muhafaza edilmez.
 
-{% highlight c# %}
+``` c#
 myE.People.Add(p_new);
-{% endhighlight %}
+```
 
 Var olan kayıtları temsil eden nesnelerdeki yaptığımız değişikler (isimini değiştirmek gibi) ve eklediğimiz yeni nesneleri veri tabanına kaydetmek için şu fonksiyonu `myE` nesnesi üzerinden çağırmalıyız:
 
-{% highlight c# %}
+``` c#
 myE.SaveChanges();
-{% endhighlight %}
+```
 
 Sonunda <abbr title="Entitiy Framework">EF</abbr> ile oluşturulan nesneleri kullanarak arkaplandaki veri tabanını düşünmeden yazdığımız kod ile verilerimiz kayıt altında olacak. Bunun sayesinde veri tabanı ile kod arasındaki ilişkiyi sağlamak için harcayacağımız efor minimuma ulaşmış oldu. 
 
