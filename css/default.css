@@ -193,43 +193,43 @@ body{
 }
 .fa{
 	display: inline-block;
-  font-family: 'font-awesome-custom';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	font-family: 'font-awesome-custom';
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 .fa-home:before {
-  content: "\E800";
+	content: "\E800";
 }
 .fa-github:before{
 	content: "\E801";
 }
 .fa-twitter:before {
-  content: "\E802";
+	content: "\E802";
 }
 .fa-twitter-square:before {
-  content: "\E803";
+	content: "\E803";
 }
 .fa-facebook-square:before {
-  content: "\E804";
+	content: "\E804";
 }
 .fa-google-plus-square:before {
-  content: "\E805";
+	content: "\E805";
 }
 .fa-linkedin-square:before {
-  content: "\E806";
+	content: "\E806";
 }
 .fa-calendar:before {
-  content: "\E807";
+	content: "\E807";
 }
 .fa-tag:before {
-  content: "\E808";
+	content: "\E808";
 }
 .fa-folder-open:before {
-  content: "\E809";
+	content: "\E809";
 }
 .fa-code:before {
-  content: "\E80a";
+	content: "\E80a";
 }
