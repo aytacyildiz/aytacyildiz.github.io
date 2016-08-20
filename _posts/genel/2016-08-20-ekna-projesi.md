@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Bir Microsoft Yaz Okulu projesi Ekna
-categories: kodlama
+categories: genel
 description: Microsoft Yaz Okulu için hazırladığım Windows 8.1 ve Windows Phone 8.1 uygulama projesi
 tags: [c#, microsoft, windowsphone, windows, microsoftazure, cloud]
 ---
