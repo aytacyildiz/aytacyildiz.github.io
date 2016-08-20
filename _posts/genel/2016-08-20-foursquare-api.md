@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Bir bölgedeki popüler mekanlar
+title: Bir Bölgedeki Popüler Mekanlar
 categories: genel
 description: Bir ildeki anlık popüler mekanların sıralı listesini veri tabanında saklama.
 tags: [C#, api, restfulapi, consoleapp, geolocation]
