@@ -95,10 +95,9 @@ body{
 .pure-img-border{
 	outline: 0.15em solid #ddd;
 }
-#site-article-content .highlight{
-	background-color: #fff;
+.highlight{
+	color: #f8f8f2;
 }
-
 #site-article-content a{
 	word-wrap: break-word;
 }
